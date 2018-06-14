@@ -1,10 +1,10 @@
 # Site settings
 title: Water Blog
-SEOTitle: Water Blog
+SEOTitle: 奔腾的水滴Blog
 header-img: img/post-bg-desk.jpg
 email: panhaocn@outlook.com
 description: "Every failure is leading towards success."
-keyword: "Python, 独步天下的博客, SQA, DevOps"
+keyword: "Python, SQA, DevOps"
 url: "http://ontheway01.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/ontheway01/ontheway01.github.io.git" # you code repository
@@ -88,9 +88,9 @@ service-worker: true
 
 
 # Friends
-friends: [
-    {
-        title: "SonarQube",
-        href: "http://zhengwuyang.com"
-    }
-]
+# friends: [
+#     {
+#         title: "SonarQube",
+#         href: "http://zhengwuyang.com"
+#     }
+# ]
