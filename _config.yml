@@ -54,8 +54,8 @@ kramdown:
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: f2c84e7629bb1446c1a4                            #生成的clientID
-  clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
+  clientID: 5166aef380afe761f19f                            #生成的clientID
+  clientSecret: c9280b121ec2391973130d115bd7dde81044706e    #生成的clientSecret
   repo: ontheway01.github.io    #仓库名称
   owner: ontheway01    #github用户名
   admin: ontheway01
