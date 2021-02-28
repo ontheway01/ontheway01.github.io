@@ -1,0 +1,29 @@
+---
+layout:     post
+title:      Git学习笔记
+subtitle:   Learn Git Branching 小结
+date:       2021-02-28
+author:     ontheeway01
+header-img: img/post-bg-cook.jpg
+catalog: true
+tags: 
+    - Git alias
+    - Git Reset
+---
+
+# Git学习笔记
+
+## 基础篇
+
+## 进阶篇
+
+### git reset
+git reset功能整体的操作分为三个步骤:第一步（移动指针）、第二步（更新暂存区）、第三步（回滚修改）。
+git reset --soft，只会回滚commit操作，所有的改动都会保留在暂存区。相当于回到了执行git commit之前。
+
+git reset --mixed，不仅会回滚commit操作，也会回滚暂存区内的内容。相当于回到了执行git add之前。
+
+git reset --hard，会回滚一切，重置工作区。相当于回到了改动之前，没有被commit的内容会丢失。
+
+## 参考资料
+1. 沙箱运行环境: https://learngitbranching.js.org/?NODEMO
