@@ -16,9 +16,41 @@ Go's standard library provides a rich set of packages that abstract away most of
 
 In this guide, we'll create a simple "Hello, World!" command-line application that runs on both Windows and Linux. This example will demonstrate the basics of writing cross-platform Go code and building executables for different operating systems.
 
-### Step 1: Setting Up Your Environment
+
+### Step 0: Setting Up Your Environment
 
 Ensure you have Go installed on your machine. You can download and install Go from the official website: <https://golang.org/dl/>.
+
+### Step 1: Understand Platforms
+let's first understand what types of platforms Go can build for and how Go associates these platforms with the environment variables GOOS and GOARCH.
+
+The Go tool has a command that can print out the list of platforms that Go can build for. This list changes with every new Go release, so the combinations discussed here might be different in another version of Go. At the time of writing this tutorial, the Go release version is 1.13.
+
+To find the applicable platforms, execute the following command:
+
+```bash
+go tool dist list
+```
+
+You will receive output similar to this:
+
+```plaintext
+aix/ppc64        freebsd/amd64   linux/mipsle   openbsd/386
+android/386      freebsd/arm     linux/ppc64    openbsd/amd64
+android/amd64    illumos/amd64   linux/ppc64le  openbsd/arm
+android/arm      js/wasm         linux/s390x    openbsd/arm64
+android/arm64    linux/386       nacl/386       plan9/386
+darwin/386       linux/amd64     nacl/amd64p32  plan9/amd64
+darwin/amd64     linux/arm       nacl/arm       plan9/arm
+darwin/arm       linux/arm64     netbsd/386     solaris/amd64
+darwin/arm64     linux/mips      netbsd/amd64   windows/386
+dragonfly/amd64  linux/mips64    netbsd/arm     windows/amd64
+freebsd/386      linux/mips64le  netbsd/arm64   windows/arm
+```
+
+The output is a list of key-value pairs separated by slashes. 
+1. The first part of the key-value pair, before the slash, is the operating system. In Go, these operating systems will be the values of the environment variable **GOOS**, representing Go Operation System.
+2. The second part, after the slash, is the architecture. As mentioned earlier, these are all possible values for the environment variable **GOARCH**.
 
 ### Step 2: Creating Your Application
 
