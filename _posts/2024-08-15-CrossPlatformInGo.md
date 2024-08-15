@@ -7,8 +7,8 @@ author:     ontheeway01
 header-img: img/post-bg-cook.jpg
 catalog: true
 tags: 
-    - Git alias
-    - Git Reset
+    - GOARCH
+    - GOOS
 ---
 
 
